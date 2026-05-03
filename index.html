@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>বাংলাদেশ ড্রিম ট্যুর — Explore Bangladesh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="brand-name">Bangladesh <em>Dream Tour</em></span>
+    <span class="brand-tagline">Discover the Beauty Within</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="tours.html">Tours</a></li>
+    <li><a href="booking.html">Book Now</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="login.html" class="btn-outline">Login</a>
+    <a href="booking.html" class="btn-primary">Book Now</a>
+  </div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-pill">🇧🇩 &nbsp; Bangladesh Travel Experience</div>
+    <h1 class="hero-title">
+      Explore the<br/>
+      <em>Golden Bengal</em><br/>
+      <span class="stroke">Like Never Before</span>
+    </h1>
+    <p class="hero-sub">From the world's longest sea beach to ancient temples, misty hills to the Sundarbans — discover Bangladesh's breathtaking wonders.</p>
+    <div class="hero-btns">
+      <a href="tours.html" class="btn-primary large">Explore Tours</a>
+      <a href="#destinations" class="btn-ghost">View Destinations</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">3,200+</div><div class="stat-label">Happy Travelers</div></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Destinations</div></div>
+      <div class="stat-sep"></div>
+      <div class="stat"><div class="stat-num">99%</div><div class="stat-label">Satisfaction</div></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <div class="hero-main-img anim-float">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80"
+          alt="Cox's Bazar Beach"
+          style="width:100%;height:540px;object-fit:cover;"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80';"
+        />
+      </div>
+      <div class="hero-thumb">
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80"
+          alt="Sajek Valley"
+          style="width:100%;height:125px;object-fit:cover;"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=80';"
+        />
+      </div>
+      <div class="hero-float hero-float-1 anim-float-slow">
+        <div class="float-icon">🌊</div>
+        <div><div class="float-title">Cox's Bazar</div><div class="float-sub">World's Longest Beach</div></div>
+      </div>
+      <div class="hero-float hero-float-2 anim-float">
+        <div class="float-big">4.9★</div>
+        <div class="float-sub">Top Rated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section class="search-section">
+  <form class="search-bar" action="tours.html" method="GET">
+    <div class="search-field">
+      <label class="s-label">Destination</label>
+      <input class="s-input" type="text" name="destination" placeholder="Cox's Bazar, Sundarbans..."/>
+    </div>
+    <div class="search-field">
+      <label class="s-label">Travel Date</label>
+      <input class="s-input" type="date" name="date"/>
+    </div>
+    <div class="search-field">
+      <label class="s-label">Travelers</label>
+      <select class="s-select" name="travelers">
+        <option>1 Person</option>
+        <option>2 People</option>
+        <option>3–5 People</option>
+        <option>6+ People</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <label class="s-label">Category</label>
+      <select class="s-select" name="category">
+        <option value="">All Types</option>
+        <option value="beach">Beach</option>
+        <option value="hill">Hill & Forest</option>
+        <option value="heritage">Heritage</option>
+        <option value="wildlife">Wildlife</option>
+        <option value="river">River & Haor</option>
+      </select>
+    </div>
+    <button type="submit" class="btn-primary">Search</button>
+  </form>
+</section>
+
+<!-- DESTINATIONS BY REGION -->
+<section class="section" id="destinations">
+  <div class="section-header">
+    <div class="s-tag">✦ Explore by Region</div>
+    <h2 class="s-title">Popular <em>Destinations</em></h2>
+    <p class="s-sub">Every corner of Bangladesh holds a unique story waiting to be explored</p>
+  </div>
+  <div class="regions-grid">
+    <div class="region-pill" onclick="filterByRegion('chittagong')">
+      <div class="region-emoji">🌊</div>
+      <div class="region-name">Chittagong</div>
+      <div class="region-count">8 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('sylhet')">
+      <div class="region-emoji">🍃</div>
+      <div class="region-name">Sylhet</div>
+      <div class="region-count">6 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('khulna')">
+      <div class="region-emoji">🐅</div>
+      <div class="region-name">Khulna</div>
+      <div class="region-count">5 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('dhaka')">
+      <div class="region-emoji">🏛️</div>
+      <div class="region-name">Dhaka</div>
+      <div class="region-count">4 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('rajshahi')">
+      <div class="region-emoji">🏺</div>
+      <div class="region-name">Rajshahi</div>
+      <div class="region-count">4 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('barisal')">
+      <div class="region-emoji">🚤</div>
+      <div class="region-name">Barisal</div>
+      <div class="region-count">3 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('rangpur')">
+      <div class="region-emoji">🌾</div>
+      <div class="region-name">Rangpur</div>
+      <div class="region-count">3 tours</div>
+    </div>
+    <div class="region-pill" onclick="filterByRegion('mymensingh')">
+      <div class="region-emoji">🌿</div>
+      <div class="region-name">Mymensingh</div>
+      <div class="region-count">2 tours</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED TOURS -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="s-tag">✦ Top Picks</div>
+    <h2 class="s-title">Featured <em>Tours</em></h2>
+    <p class="s-sub">Handpicked experiences showcasing the very best of Bangladesh</p>
+  </div>
+  <div class="tours-grid" id="tours-grid"></div>
+  <div class="center-btn">
+    <a href="tours.html" class="btn-outline large">View All Tours →</a>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="why-wrap">
+    <div class="why-left">
+      <div class="s-tag">✦ Why Choose Us</div>
+      <h2 class="s-title">Travel Bangladesh<br/><em>Smarter</em></h2>
+      <p class="s-sub">We are local experts who know every hidden gem — from the mangroves of Sundarbans to the tea gardens of Sylhet.</p>
+      <a href="tours.html" class="btn-primary">Start Exploring</a>
+    </div>
+    <div class="why-cards">
+      <div class="why-card fade-up">
+        <div class="why-icon">🛡️</div>
+        <h3>Safe Travel</h3>
+        <p>Fully vetted local guides and insured trips with 24/7 support throughout your journey.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">💰</div>
+        <h3>Best Price</h3>
+        <p>Affordable packages with no hidden costs. Best price guarantee across all tours.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🗺️</div>
+        <h3>Local Expertise</h3>
+        <p>Born and raised locally — our guides know the real Bangladesh beyond tourist brochures.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">📱</div>
+        <h3>Easy Booking</h3>
+        <p>Book in minutes via bKash, Nagad, or card. Instant confirmation every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="s-tag">✦ Traveler Stories</div>
+    <h2 class="s-title">What Our <em>Travelers</em> Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card fade-up">
+      <div class="stars">★★★★★</div>
+      <p>"The Sundarbans package was absolutely incredible. Our guide knew exactly where to spot Royal Bengal Tigers. Unforgettable experience!"</p>
+      <div class="reviewer"><div class="avatar">RH</div><div><strong>Rahim Hossain</strong><small>Dhaka</small></div></div>
+    </div>
+    <div class="testi-card feat fade-up">
+      <div class="stars">★★★★★</div>
+      <p>"Sajek Valley in the clouds — I had no words. Bangladesh Dream Tour organized everything perfectly from transport to accommodation. Highly recommend!"</p>
+      <div class="reviewer"><div class="avatar">SK</div><div><strong>Sumaiya Khan</strong><small>Chittagong</small></div></div>
+    </div>
+    <div class="testi-card fade-up">
+      <div class="stars">★★★★★</div>
+      <p>"The Sylhet tea garden tour was magical. Woke up surrounded by mist and endless green. Our guide Karim bhai was amazing throughout."</p>
+      <div class="reviewer"><div class="avatar">NA</div><div><strong>Nafis Ahmed</strong><small>Sylhet</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+  <div>
+    <h2>Get Exclusive <em>Bangladesh</em> Travel Deals</h2>
+    <p>Subscribe and be the first to know about new tours, seasonal offers, and hidden gems.</p>
+    <form class="nl-form" action="php/newsletter.php" method="POST">
+      <input type="email" name="email" placeholder="Enter your email address" required/>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name" style="font-family:var(--font-display);font-size:22px;">Bangladesh <em style="color:var(--gold);font-style:italic;">Dream Tour</em></div>
+      <p>Your trusted local travel partner for discovering the hidden treasures of Bangladesh — from mountains to mangroves.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">All Tours</a></li>
+        <li><a href="booking.html">Book a Tour</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Top Spots</h4>
+      <ul>
+        <li><a href="#">Cox's Bazar</a></li>
+        <li><a href="#">Sundarbans</a></li>
+        <li><a href="#">Sajek Valley</a></li>
+        <li><a href="#">Sreemangal</a></li>
+        <li><a href="#">Paharpur</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>📍 Dhaka, Bangladesh</p>
+      <p>📞 +880 1700-000000</p>
+      <p>✉️ hello@bdreamtour.com</p>
+      <p>🕐 Sat–Thu: 9am – 8pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Bangladesh Dream Tour. All rights reserved.</p>
+    <p>🇧🇩 Made with love for Bangladesh</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

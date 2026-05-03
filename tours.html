@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Tours — Bangladesh Dream Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-brand"><span class="brand-name">Bangladesh <em>Dream Tour</em></span><span class="brand-tagline">Discover the Beauty Within</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="tours.html" class="active">Tours</a></li>
+    <li><a href="booking.html">Book Now</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions"><a href="login.html" class="btn-outline">Login</a><a href="booking.html" class="btn-primary">Book Now</a></div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="s-tag">✦ Explore Bangladesh</div>
+    <h1>All Tours</h1>
+    <p>Discover 30+ curated destinations across the beautiful land of Bangladesh</p>
+  </div>
+</section>
+<section class="section">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="beach">🌊 Beach</button>
+    <button class="filter-btn" data-filter="hill">⛰️ Hill & Forest</button>
+    <button class="filter-btn" data-filter="heritage">🏛️ Heritage</button>
+    <button class="filter-btn" data-filter="wildlife">🐅 Wildlife</button>
+    <button class="filter-btn" data-filter="river">🚤 River & Haor</button>
+    <div class="filter-sort">
+      <select id="sort-select">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+  </div>
+  <div class="tours-grid" id="tours-grid"></div>
+</section>
+<footer class="footer"><div class="footer-bottom"><p>&copy; 2025 Bangladesh Dream Tour. All rights reserved.</p><p>🇧🇩 Made with love for Bangladesh</p></div></footer>
+<script src="js/main.js"></script><script src="js/tours.js"></script>
+</body>
+</html>

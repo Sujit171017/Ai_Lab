@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Bangladesh Dream Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-brand"><span class="brand-name">Bangladesh <em>Dream Tour</em></span><span class="brand-tagline">Discover the Beauty Within</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li>
+    <li><a href="booking.html">Book Now</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="nav-actions"><a href="login.html" class="btn-outline">Login</a></div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="s-tag">✦ Get in Touch</div>
+    <h1>Contact Us</h1>
+    <p>Our travel experts are ready to help you plan the perfect Bangladesh adventure.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Let's Plan Your <em style="color:var(--gold);font-style:italic;">Bangladesh Trip</em></h2>
+      <p>Have questions about a tour? Want a custom itinerary? Our local experts are here to help.</p>
+      <div class="cinfo-items">
+        <div class="cinfo-item"><div class="cinfo-icon">📍</div><div><strong>Address</strong><p>123 Motijheel, Dhaka 1000, Bangladesh</p></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📞</div><div><strong>Phone</strong><p>+880 1700-000000</p></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">✉️</div><div><strong>Email</strong><p>hello@bdreamtour.com</p></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">📱</div><div><strong>bKash / Nagad</strong><p>01700-000000</p></div></div>
+        <div class="cinfo-item"><div class="cinfo-icon">🕐</div><div><strong>Office Hours</strong><p>Sat–Thu: 9am – 8pm</p></div></div>
+      </div>
+    </div>
+    <div class="contact-form-card">
+      <form action="php/contact.php" method="POST" id="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Full name" required/></div>
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="form-group fw"><label>Subject</label><input type="text" name="subject" placeholder="How can we help?" required/></div>
+        <div class="form-group fw"><label>Message</label><textarea name="message" rows="5" placeholder="Tell us about your travel plans..." required></textarea></div>
+        <div id="contact-msg" class="form-msg"></div>
+        <button type="submit" class="btn-primary full-btn">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="footer"><div class="footer-bottom"><p>&copy; 2025 Bangladesh Dream Tour. All rights reserved.</p><p>🇧🇩 Made with love for Bangladesh</p></div></footer>
+<script src="js/main.js"></script><script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — Bangladesh Dream Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-brand"><span class="brand-name">Bangladesh <em>Dream Tour</em></span></div>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li></ul>
+  <div class="nav-actions"><a href="login.html" class="btn-outline">Login</a></div>
+</nav>
+<section class="auth-wrap">
+  <div class="auth-box" style="max-width:500px">
+    <div class="auth-brand"><span class="brand-name" style="font-family:var(--font-display);font-size:22px;">Bangladesh <em style="color:var(--gold);">Dream Tour</em></span></div>
+    <h2>Create Account</h2>
+    <p class="auth-sub">Join thousands of Bangladesh explorers</p>
+    <form action="php/register.php" method="POST" id="register-form">
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required/></div>
+        <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="+880 XXXX-XXXXXX"/></div>
+      </div>
+      <div class="form-group fw"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+      <div class="form-row">
+        <div class="form-group"><label>Password</label><input type="password" name="password" placeholder="Min 8 characters" required/></div>
+        <div class="form-group"><label>Confirm Password</label><input type="password" name="confirm_password" placeholder="Re-enter" required/></div>
+      </div>
+      <div id="register-msg" class="form-msg"></div>
+      <button type="submit" class="btn-primary full-btn">Create Account →</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+</section>
+<script src="js/main.js"></script>
+<script>
+const rf=document.getElementById('register-form'),rm=document.getElementById('register-msg');
+if(rf){rf.addEventListener('submit',async(e)=>{e.preventDefault();const pw=rf.querySelector('[name="password"]').value,cp=rf.querySelector('[name="confirm_password"]').value;if(pw!==cp){rm.className='form-msg error';rm.textContent='Passwords do not match.';return;}const btn=rf.querySelector('button');btn.textContent='Creating...';btn.disabled=true;try{const fd=new FormData(rf),res=await fetch('php/register.php',{method:'POST',body:fd}),data=await res.json();rm.className='form-msg '+(data.success?'success':'error');rm.textContent=data.message;if(data.success)setTimeout(()=>{window.location.href='login.html';},1500);}catch{rm.className='form-msg error';rm.textContent='Something went wrong.';}btn.textContent='Create Account →';btn.disabled=false;});}
+</script>
+</body>
+</html>

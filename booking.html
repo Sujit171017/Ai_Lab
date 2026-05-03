@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Tour — Bangladesh Dream Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-brand"><span class="brand-name">Bangladesh <em>Dream Tour</em></span><span class="brand-tagline">Discover the Beauty Within</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li>
+    <li><a href="booking.html" class="active">Book Now</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions"><a href="login.html" class="btn-outline">Login</a></div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="s-tag">✦ Reserve Your Spot</div>
+    <h1>Book Your Tour</h1>
+    <p>Fill in your details and we'll confirm your booking within 24 hours</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="booking-wrap">
+    <div class="form-card">
+      <h2>Booking Details</h2>
+      <form action="php/booking.php" method="POST" id="booking-form">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required/></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="+880 XXXX-XXXXXX" required/></div>
+          <div class="form-group"><label>Travelers *</label>
+            <select name="travelers" required>
+              <option value="">Select</option>
+              <option value="1">1 Person</option><option value="2">2 People</option>
+              <option value="3">3 People</option><option value="4">4 People</option><option value="5+">5+ People</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Select Tour *</label>
+            <select name="tour" id="tour-select" required>
+              <option value="">Choose a destination</option>
+              <option value="coxsbazar">Cox's Bazar Beach — 3 Days (৳৩,৯৯৯)</option>
+              <option value="sundarbans">Sundarbans Safari — 4 Days (৳৫,৯৯৯)</option>
+              <option value="sajek">Sajek Valley — 3 Days (৳২,৯৯৯)</option>
+              <option value="sreemangal">Sreemangal Tea Tour — 2 Days (৳১,৯৯৯)</option>
+              <option value="paharpur">Paharpur Heritage — 2 Days (৳১,৪৯৯)</option>
+              <option value="bandarban">Bandarban Hills — 4 Days (৳৪,৯৯৯)</option>
+              <option value="kuakata">Kuakata Sunrise — 3 Days (৳৩,৪৯৯)</option>
+              <option value="tanguar">Tanguar Haor — 2 Days (৳২,৪৯৯)</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Travel Date *</label><input type="date" name="travel_date" required/></div>
+        </div>
+        <div class="form-group fw"><label>Special Requests</label><textarea name="requests" rows="4" placeholder="Dietary needs, accessibility requirements, special occasions..."></textarea></div>
+        <div class="form-group fw">
+          <label>Payment Method</label>
+          <div class="payment-options">
+            <label class="payment-opt"><input type="radio" name="payment" value="bkash" checked/><span>📱 bKash</span></label>
+            <label class="payment-opt"><input type="radio" name="payment" value="nagad"/><span>📱 Nagad</span></label>
+            <label class="payment-opt"><input type="radio" name="payment" value="rocket"/><span>📱 Rocket</span></label>
+            <label class="payment-opt"><input type="radio" name="payment" value="card"/><span>💳 Card</span></label>
+            <label class="payment-opt"><input type="radio" name="payment" value="bank"/><span>🏦 Bank</span></label>
+          </div>
+        </div>
+        <div id="booking-msg" class="form-msg"></div>
+        <button type="submit" class="btn-primary full-btn">Confirm Booking →</button>
+      </form>
+    </div>
+    <div class="summary-card">
+      <h3>Booking Summary</h3>
+      <div class="summary-row"><span>Tour</span><strong id="sum-tour">—</strong></div>
+      <div class="summary-row"><span>Date</span><strong id="sum-date">—</strong></div>
+      <div class="summary-row"><span>Travelers</span><strong id="sum-travelers">—</strong></div>
+      <div class="summary-row total"><span>Total Est.</span><strong id="sum-price">—</strong></div>
+      <div class="summary-note">
+        <p>✅ Free cancellation up to 7 days before</p>
+        <p>✅ 24/7 customer support</p>
+        <p>✅ Instant booking confirmation</p>
+        <p>✅ Local certified guides</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-bottom"><p>&copy; 2025 Bangladesh Dream Tour. All rights reserved.</p></div></footer>
+<script src="js/main.js"></script><script src="js/booking.js"></script>
+</body>
+</html>

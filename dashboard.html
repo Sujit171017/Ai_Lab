@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — Bangladesh Dream Tour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-brand"><span class="brand-name">Bangladesh <em>Dream Tour</em></span><span class="brand-tagline">Discover the Beauty Within</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="tours.html">Tours</a></li>
+    <li><a href="booking.html">Book Now</a></li><li><a href="dashboard.html" class="active">Dashboard</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions"><a href="login.html" class="btn-outline">Logout</a></div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<section class="dash-section">
+  <div class="dash-header">
+    <div>
+      <h1>Welcome back, <em>Traveler</em> 🌿</h1>
+      <p style="color:var(--muted);font-weight:300;">Here's an overview of your Bangladesh travel journey</p>
+    </div>
+    <a href="booking.html" class="btn-primary">+ New Booking</a>
+  </div>
+
+  <div class="dash-stats-row">
+    <div class="dstat"><div class="dstat-icon">✈️</div><div><div class="dstat-num">4</div><div class="dstat-label">Total Trips</div></div></div>
+    <div class="dstat"><div class="dstat-icon">📅</div><div><div class="dstat-num">1</div><div class="dstat-label">Upcoming</div></div></div>
+    <div class="dstat"><div class="dstat-icon">🗺️</div><div><div class="dstat-num">7</div><div class="dstat-label">Districts Visited</div></div></div>
+    <div class="dstat"><div class="dstat-icon">💰</div><div><div class="dstat-num">৳৩৮,৫০০</div><div class="dstat-label">Total Spent</div></div></div>
+  </div>
+
+  <div class="dtable-card">
+    <div class="dtable-head">
+      <h3>My Bookings</h3>
+      <input type="text" class="dsearch" id="booking-search" placeholder="Search bookings..."/>
+    </div>
+    <div class="table-wrap">
+      <table class="dtable" id="bookings-table">
+        <thead>
+          <tr>
+            <th>Booking ID</th><th>Destination</th><th>Date</th>
+            <th>Travelers</th><th>Amount</th><th>Status</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="bookings-tbody">
+          <tr>
+            <td>#BDT-2001</td><td>Sundarbans Safari</td><td>2025-08-18</td>
+            <td>3</td><td>৳১৭,৯৯৭</td>
+            <td><span class="badge badge-ok">Confirmed</span></td>
+            <td><button class="btn-sm" onclick="viewBooking('BDT-2001')">View</button></td>
+          </tr>
+          <tr>
+            <td>#BDT-2002</td><td>Bandarban Hills</td><td>2025-10-10</td>
+            <td>2</td><td>৳৯,৯৯৮</td>
+            <td><span class="badge badge-pend">Pending</span></td>
+            <td><button class="btn-sm" onclick="viewBooking('BDT-2002')">View</button></td>
+          </tr>
+          <tr>
+            <td>#BDT-1988</td><td>Cox's Bazar</td><td>2025-02-14</td>
+            <td>4</td><td>৳১৫,৯৯৬</td>
+            <td><span class="badge badge-done">Completed</span></td>
+            <td><button class="btn-sm" onclick="viewBooking('BDT-1988')">View</button></td>
+          </tr>
+          <tr>
+            <td>#BDT-1965</td><td>Sreemangal Tea Tour</td><td>2024-12-05</td>
+            <td>2</td><td>৳৩,৯৯৮</td>
+            <td><span class="badge badge-done">Completed</span></td>
+            <td><button class="btn-sm" onclick="viewBooking('BDT-1965')">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-bottom"><p>&copy; 2025 Bangladesh Dream Tour. All rights reserved.</p><p>🇧🇩 Made with love for Bangladesh</p></div></footer>
+<script src="js/main.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>
